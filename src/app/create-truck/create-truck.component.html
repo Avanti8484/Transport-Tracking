@@ -1,0 +1,28 @@
+<div class="col-md-8 offset-md-3">
+<h3> Add Truck Details</h3>
+<form  (ngSubmit) = "onSubmit()"  >
+    <div class="form-group">
+        <label>Vehicle No.</label>
+        <input type="text" class= "form-control" id = "vehicle_no" 
+            [(ngModel)] = "truck.vehicle_no" name = "vehicle_no" required>
+         </div>
+        
+         
+
+    <div class="form-group">
+   <label>Model of Truck</label>
+   <input type="text" class= "form-control" id = "model" 
+       [(ngModel)] = "truck.model" name = "model">
+    </div>
+    <!-- <div [hidden]="!model.pristine" class="alert alert-danger">Name is required</div>
+    <div class="form-group"> -->
+
+    <div class="form-group">
+        <label>Fuel Efficiency</label>
+        <input type="text" class="form-control" id="fuel_efficiency"
+            [(ngModel)] = "truck.fuel_efficiency" name = "fuel_efficiency">
+         </div>
+
+    <button class="btn btn-success" type="submit">Add</button>
+</form>
+</div>

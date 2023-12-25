@@ -1,0 +1,26 @@
+<h2> Truck List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Vehicle No.</th>
+            <th>Model</th>
+            <th>Fuel_Efficiency</th>
+            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let truck of trucks"> 
+            <td>{{truck.vehicle_no}}</td>
+            <td>{{truck.model}}</td>
+            <td>{{truck.fuel_efficiency}}</td>
+            <td>
+                <button (click)="updateTruck(truck.vehicle_no)" class="btn btn-info" >Update</button>
+
+                <button (click)="deleteTruck(truck.vehicle_no)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                <button (click)="truckDetails(truck.vehicle_no)" class="btn btn-success" style="margin-left:10px">View</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
